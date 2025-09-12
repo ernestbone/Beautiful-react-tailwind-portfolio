@@ -28,8 +28,9 @@ const projects = [
     description:
       'A modern, responsive portfolio website built with React and TailwindCSS to showcase projects, skills, and professional experience.',
     image: '/projects/Project3.png',
-    demoUrl: 'https://pingup.vercel.app/',
-    githubUrl: 'https://github.com/ernestbone/NS-pingUP',
+    demoUrl: 'https://ernestto-five.vercel.app/',
+    githubUrl:
+      'https://github.com/ernestbone/Beautiful-react-tailwind-portfolio',
     tags: ['React', 'TailwindCSS', 'HTML/CSS', 'Javascript'],
   },
 ];
