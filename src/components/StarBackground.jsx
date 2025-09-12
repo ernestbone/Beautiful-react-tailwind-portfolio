@@ -25,7 +25,7 @@ export const StarBackground = () => {
     const newStars = [];
     for (let i = 0; i < numberOfStars; i++) {
       newStars.push({
-        id: 1,
+        id: i,
         size: Math.random() * 3 + 1,
         x: Math.random() * 100,
         y: Math.random() * 100,
@@ -41,7 +41,7 @@ export const StarBackground = () => {
     const newMeteors = [];
     for (let i = 0; i < numberOfMeteors; i++) {
       newMeteors.push({
-        id: 1,
+        id: i,
         size: Math.random() * 2 + 1,
         x: Math.random() * 100,
         y: Math.random() * 20,
