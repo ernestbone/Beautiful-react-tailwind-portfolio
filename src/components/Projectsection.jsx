@@ -20,7 +20,14 @@ const projects = [
     image: '/projects/Project2.png',
     demoUrl: 'https://ns-amazona.onrender.com/',
     githubUrl: 'https://github.com/ernestbone/NS-Amazona',
-    tags: ['React', 'Node.js', 'Express', 'MongoDB', 'TailwindCSS'],
+    tags: [
+      'React',
+      'Node.js',
+      'Express',
+      'TypeScript',
+      'MongoDB',
+      'TailwindCSS',
+    ],
   },
   {
     id: 1,

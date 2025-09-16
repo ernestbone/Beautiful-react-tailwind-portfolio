@@ -1,23 +1,40 @@
+import { Code, CodeIcon, CodeXml } from 'lucide-react';
 import { useState } from 'react';
 
 const skills = [
   //Frontend
-  { name: 'HTML/CSS', level: 95, category: 'frontend' },
-  { name: 'JavaScript', level: 90, category: 'frontend' },
-  { name: 'React', level: 90, category: 'frontend' },
-  { name: 'TypeScript', level: 70, category: 'frontend' },
-  { name: 'TailwindCSS', level: 90, category: 'frontend' },
-  { name: 'Next.js', level: 70, category: 'frontend' },
+  { name: 'HTML/CSS', icon: '/icons/html5.svg', category: 'frontend' },
+  {
+    name: 'JavaScript',
+    icon: '/icons/javascript.svg',
+    category: 'frontend',
+  },
+  { name: 'React', icon: '/icons/react.svg', category: 'frontend' },
+  {
+    name: 'TypeScript',
+    icon: '/icons/typescript.svg',
+    category: 'frontend',
+  },
+  {
+    name: 'TailwindCSS',
+    icon: '/icons/tailwindcss.svg',
+    category: 'frontend',
+  },
+  { name: 'Next.js', icon: '/icons/nextjs.svg', category: 'frontend' },
 
   //Backend
-  { name: 'Node.js', level: 80, category: 'backend' },
-  { name: 'Express', level: 80, category: 'backend' },
-  { name: 'MongoDB', level: 80, category: 'backend' },
+  { name: 'Node.js', icon: '/icons/nodejs.svg', category: 'backend' },
+  {
+    name: 'Express',
+    icon: '/icons/expressjs.svg',
+    category: 'backend',
+  },
+  { name: 'MongoDB', icon: '/icons/mongodb.svg', category: 'backend' },
 
   //Tools
-  { name: 'Git/Github', level: 90, category: 'tools' },
-  { name: 'VS Code', level: 95, category: 'tools' },
-  { name: 'figma', level: 50, category: 'tools' },
+  { name: 'Git/Github', icon: '/icons/github.svg', category: 'tools' },
+  { name: 'VS Code', icon: '/icons/vscode.svg', category: 'tools' },
+  { name: 'figma', icon: '/icons/figma.svg', category: 'tools' },
 ];
 
 const categories = ['all', 'frontend', 'backend', 'tools'];
@@ -52,25 +69,17 @@ export const SkillsSection = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
           {filteredskills.map((skill, key) => (
             <div
               key={key}
               className="bg-card p-6 rounded-lg shadow-xs card-hover"
             >
-              <div className="text-left mb-4">
+              <div className=" mb-4 text-center">
                 <h3 className="font-semibold text-lg">{skill.name}</h3>
               </div>
-              <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
-                <div
-                  className="bg-primary h-2 rounded-full origin-left animate-[grow_1.5s_ease-out"
-                  style={{ width: `${skill.level}%` }}
-                />
-              </div>
-              <div className="text-right mt-1 ">
-                <span className="text-sm text-muted-foreground">
-                  {skill.level}%
-                </span>
+              <div className="flex justify-center ">
+                <img src={skill.icon} alt="" className=" w-50 h-50" />
               </div>
             </div>
           ))}
