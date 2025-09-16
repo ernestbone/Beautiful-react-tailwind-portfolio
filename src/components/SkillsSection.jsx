@@ -79,7 +79,7 @@ export const SkillsSection = () => {
                 <h3 className="font-semibold text-lg">{skill.name}</h3>
               </div>
               <div className="flex justify-center ">
-                <img src={skill.icon} alt="" className=" w-50 h-50" />
+                <img src={skill.icon} alt="" className=" w-20 h-20" />
               </div>
             </div>
           ))}
